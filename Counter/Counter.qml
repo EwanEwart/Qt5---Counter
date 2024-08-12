@@ -1,9 +1,13 @@
+//
+// Counter.qml
+//
 import QtQuick
 
 Item {
     id: counter
     anchors.fill: parent
     property int count: 0
+    property real r: 100
 
     // onCountChanged: print(count)
 
@@ -24,22 +28,31 @@ Item {
             text: counter.count
         }
     }
-    Row {
+    Grid {
         id: buttons
-        width: counter.width
-        height: counter.height / 2
+        rows: 1; columns: 3; spacing: 5
+        // width: counter.width
+        // height: counter.height / 2
         anchors.bottom: counter.bottom
+        anchors.horizontalCenter: counter.horizontalCenter
+
         RoundButton {
             lable: "-"
             onClicked: --counter.count
+            // radius: counter.width/3 - counter.width/6
+            radius: r
         }
         RoundButton {
             lable: "0"
             onClicked: counter.count = 0
+            // radius: counter.width/3 - counter.width/6
+            radius: r
         }
         RoundButton {
             lable: "+"
             onClicked: ++counter.count
+            // radius: counter.width/3 - counter.width/6
+            radius: r
         }
     }
 }

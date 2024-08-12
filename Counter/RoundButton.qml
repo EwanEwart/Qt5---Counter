@@ -1,15 +1,19 @@
+//
+// RoundButton.qml
+//
 import QtQuick
 
 Rectangle {
     id: roundButton
+    property alias radius:  roundButton.radius
     property string  lable: ""
     signal clicked()
 
-    width: counter.width/3
-    height: counter.width/3
-    radius: counter.width/3
+    // radius: counter.width/3 - counter.width/6
+    width:  radius
+    height: radius
     color: "lightgreen"
-    border.color: "green"
+    border.color: "blue"
     border.width: 1
     Text {
         id: minus
