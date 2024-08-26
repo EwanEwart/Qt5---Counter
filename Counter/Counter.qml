@@ -15,7 +15,7 @@ Item {
     Rectangle {
         id: display
         width: counter.width
-        height: counter.height / 3
+        height: counter.height / 2
         color: "lightblue"
         Text {
             // anchors.horizontalCenter: parent.horizontalCenter

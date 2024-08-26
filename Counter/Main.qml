@@ -2,8 +2,8 @@ import QtQuick
 
 Window {
     id: root
-    width: 640
-    height: 480
+    width: 320
+    height: 320
     visible: true
     title: qsTr("Counter")
     // background colour of the Window object
